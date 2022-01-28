@@ -1,0 +1,17 @@
+<p style="text-align: center;">Shuffle and Sort</p>
+<div style="display: flex;">
+    <div class="grid">
+        <div *ngFor="let num of numArray">
+            <div class="grid-item" [ngClass]="{'dim': (num == 6 || num == 7), 'light': (num == 1 || num == 8),
+            'medium': (num == 2 || num == 4), 'dark': (num == 3 || num == 5 || num == 9)}">
+                {{num}}
+            </div>
+        </div>
+    </div>
+    <div style="padding-left: 1rem; padding-top: 2%;">
+        <button class="button" (click)="sort()" style="margin-right: 20px;">Sort</button>
+        <button class="button" (click)="shuffle()">Shuffle</button>
+    </div>
+</div>
+
+<p style="text-align: center;">Shuffle and Sort by Amit Kankanwadi</p>
